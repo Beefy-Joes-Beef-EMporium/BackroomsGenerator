@@ -1,0 +1,10 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://textures/carpet.png" type="Texture" id=1]
+
+[resource]
+flags_unshaded = true
+flags_vertex_lighting = true
+albedo_color = Color( 0.690196, 0.690196, 0.54902, 1 )
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 4, 4, 1 )
