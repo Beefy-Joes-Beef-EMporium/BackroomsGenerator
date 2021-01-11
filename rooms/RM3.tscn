@@ -11,7 +11,7 @@
 
 [sub_resource type="BoxShape" id=4]
 
-[node name="RM1" type="Spatial"]
+[node name="RM3" type="Spatial"]
 
 [node name="main" type="Spatial" parent="."]
 

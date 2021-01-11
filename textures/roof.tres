@@ -2,6 +2,4 @@
 
 [resource]
 flags_unshaded = true
-flags_vertex_lighting = true
-albedo_color = Color( 0.690196, 0.690196, 0.54902, 1 )
-uv1_scale = Vector3( 4, 4, 1 )
+albedo_color = Color( 0.854902, 0.847059, 0.603922, 1 )
