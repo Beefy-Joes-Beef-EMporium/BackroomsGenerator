@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/s_main/default_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/s_main/s_main.gd" type="Script" id=2]
@@ -6,14 +6,7 @@
 [ext_resource path="res://rooms/RM1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/assets/fps_counter/FPS_Counter.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/s_main/scripts/spawner.gd" type="Script" id=6]
-[ext_resource path="res://rooms/RM3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://textures/roof.tres" type="Material" id=8]
-
-[sub_resource type="PlaneMesh" id=1]
-
-[sub_resource type="PlaneMesh" id=2]
-
-[sub_resource type="PlaneMesh" id=3]
 
 [sub_resource type="PlaneMesh" id=4]
 
@@ -24,34 +17,17 @@ script = ExtResource( 2 )
 
 [node name="RM1" parent="ArenaGeometry" instance=ExtResource( 4 )]
 
-[node name="RM3" parent="ArenaGeometry" instance=ExtResource( 7 )]
-
-[node name="spawner1" type="Spatial" parent="ArenaGeometry"]
+[node name="main" type="Spatial" parent="ArenaGeometry"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/spawner1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
 
-[node name="MeshInstance" type="MeshInstance" parent="ArenaGeometry/spawner1/POS1"]
-transform = Transform( 15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 20, 0 )
-mesh = SubResource( 1 )
-material/0 = null
+[node name="POS2" type="Position3D" parent="ArenaGeometry/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/spawner1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30 )
-
-[node name="MeshInstance" type="MeshInstance" parent="ArenaGeometry/spawner1/POS2"]
-transform = Transform( 15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 20, 0 )
-mesh = SubResource( 2 )
-material/0 = null
-
-[node name="POS3" type="Position3D" parent="ArenaGeometry/spawner1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0 )
-
-[node name="MeshInstance" type="MeshInstance" parent="ArenaGeometry/spawner1/POS3"]
-transform = Transform( 15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 20, 0 )
-mesh = SubResource( 3 )
-material/0 = null
+[node name="POS3" type="Position3D" parent="ArenaGeometry/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
 
 [node name="Lighting" type="Spatial" parent="."]
 
@@ -61,10 +37,9 @@ environment = ExtResource( 1 )
 [node name="DirectionalLight" type="DirectionalLight" parent="Lighting"]
 transform = Transform( 0.965926, 0.198266, 0.166365, -2.09447e-07, -0.642788, 0.766044, 0.258818, -0.739942, -0.620885, 2.17494, 9.39172, -2.14115 )
 light_energy = 2.0
-shadow_enabled = true
 shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="roof" type="MeshInstance" parent="."]
 transform = Transform( -25319.1, 0.00136776, 0, -0.000144909, -73.7301, 0, 0, 0, 25703.8, 0, 7.98711, 0 )
 mesh = SubResource( 4 )
 material/0 = ExtResource( 8 )

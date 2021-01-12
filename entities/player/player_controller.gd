@@ -3,7 +3,7 @@ extends KinematicBody
 ###################-VARIABLES-####################
 
 # Camera
-export(float) var mouse_sensitivity = 12.0
+export(float) var mouse_sensitivity = 20.0
 export(NodePath) var head_path
 export(NodePath) var cam_path
 export(float) var FOV = 80.0
