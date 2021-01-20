@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://RM2.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://rooms/details/table.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://rooms/details/pc.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://textures/pc.tres" type="Material" id=4]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 6.0356, 0.001, 6.03713 )
@@ -13,6 +16,9 @@ extents = Vector3( 1.81781, 3.28123, 0.264048 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 2.44448, 3.28123, 0.243032 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.667323, 2.94413, 1.40342 )
 
 [node name="RM3" type="Spatial"]
 
@@ -69,4 +75,53 @@ shape = SubResource( 2 )
 transform = Transform( -1.62921e-07, 0, 0.999999, 0, 1, 0, -0.999999, 0, -1.62921e-07, -5.72911, 2.98478, -3.85475 )
 shape = SubResource( 3 )
 
+[node name="CollisionShape11" type="CollisionShape" parent="main/RM2/collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.20617, 0, 4.02897 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape12" type="CollisionShape" parent="main/RM2/collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86107, 0, -4.08023 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape13" type="CollisionShape" parent="main/RM2/collision"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.72492, 0, -4.05948 )
+shape = SubResource( 5 )
+
 [node name="decor" type="Spatial" parent="."]
+
+[node name="table" type="MeshInstance" parent="decor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.21511, -0.139391, 6.46185 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="pc" type="MeshInstance" parent="decor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19757, 1.83634, 6.64991 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 4 )
+
+[node name="table2" type="MeshInstance" parent="decor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77136, -0.139391, -7.504 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="table3" type="MeshInstance" parent="decor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.49017, -7.99154, -0.139391, -7.03282 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="pc2" type="MeshInstance" parent="decor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75382, 1.83634, -7.31594 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 4 )

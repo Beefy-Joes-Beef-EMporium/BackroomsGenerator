@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/s_main/scripts/spawner.gd" type="Script" id=6]
 [ext_resource path="res://textures/roof.tres" type="Material" id=8]
 
-[sub_resource type="PlaneMesh" id=4]
+[sub_resource type="PlaneMesh" id=1]
 
 [node name="S_Main" type="Spatial"]
 script = ExtResource( 2 )
@@ -29,6 +29,132 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
 [node name="POS3" type="Position3D" parent="ArenaGeometry/main"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
 
+[node name="small0" type="Spatial" parent="ArenaGeometry"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+
+[node name="small2" type="Spatial" parent="ArenaGeometry"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/small2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5158, 0, -39.4918 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/small2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5483, 0, -19.7957 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/small2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5561, 0, -0.0153284 )
+
+[node name="small1" type="Spatial" parent="ArenaGeometry"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -319.121, -19.71 )
+
+[node name="medium1" type="Spatial" parent="ArenaGeometry"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/medium1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/medium1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/medium1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+
+[node name="medium6" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/medium6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/medium6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/medium6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+
+[node name="medium7" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/medium7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/medium7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/medium7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+
+[node name="medium3" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 78.8341, 0, 0 )
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/medium3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.42, 0, 0 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/medium3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.42, 0, 19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/medium3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.42, 0, -19.71 )
+
+[node name="medium2" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 78.84 )
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/medium2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/medium2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/medium2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+
+[node name="medium4" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 98.55 )
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/medium4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/medium4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/medium4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+
+[node name="medium5" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 118.26 )
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/medium5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/medium5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/medium5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+
 [node name="Lighting" type="Spatial" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
@@ -40,11 +166,11 @@ light_energy = 2.0
 shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 
 [node name="roof" type="MeshInstance" parent="."]
-transform = Transform( -25319.1, 0.00136776, 0, -0.000144909, -73.7301, 0, 0, 0, 25703.8, 0, 7.98711, 0 )
-mesh = SubResource( 4 )
+transform = Transform( -25319.1, 0.00136776, 0, -0.000144909, -73.7301, 0, 0, 0, 25703.8, 0, 7.94689, 0 )
+mesh = SubResource( 1 )
 material/0 = ExtResource( 8 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85704, 0 )
 
 [node name="FPS_Counter" parent="." instance=ExtResource( 5 )]

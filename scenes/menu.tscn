@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://small.gd" type="Script" id=1]
+[ext_resource path="res://global.gd" type="Script" id=2]
+[ext_resource path="res://scenes/assets/fps_counter/FPS_Counter.tscn" type="PackedScene" id=3]
+
+[node name="menu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="smallbutton" type="Button" parent="."]
+margin_left = 87.0
+margin_top = 90.0
+margin_right = 203.0
+margin_bottom = 139.0
+text = "start"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FPS_Counter" parent="." instance=ExtResource( 3 )]
+[connection signal="pressed" from="smallbutton" to="." method="_on_smallbutton_pressed"]

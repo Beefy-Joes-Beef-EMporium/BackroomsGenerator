@@ -1,0 +1,20 @@
+# Blender MTL File: 'base.blend'
+# Material Count: 2
+
+newmtl Material.005
+Ns 900.000000
+Ka 0.723404 0.723404 0.723404
+Kd 0.106535 0.106255 0.090094
+Ks 0.308511 0.308511 0.308511
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
