@@ -17,143 +17,355 @@ script = ExtResource( 2 )
 
 [node name="RM1" parent="ArenaGeometry" instance=ExtResource( 4 )]
 
-[node name="main" type="Spatial" parent="ArenaGeometry"]
+[node name="chunk-1" type="Spatial" parent="ArenaGeometry"]
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-1"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/main"]
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-1/main"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/main"]
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-1/main"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/main"]
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-1/main"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
 
-[node name="small0" type="Spatial" parent="ArenaGeometry"]
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-1"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/small0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-1/small0"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -19.71, 0, -19.71 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/small0"]
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-1/small0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/small0"]
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-1/small0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
 
-[node name="small2" type="Spatial" parent="ArenaGeometry"]
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-1"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/small2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5158, 0, -39.4918 )
-
-[node name="POS2" type="Position3D" parent="ArenaGeometry/small2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5483, 0, -19.7957 )
-
-[node name="POS3" type="Position3D" parent="ArenaGeometry/small2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5561, 0, -0.0153284 )
-
-[node name="small1" type="Spatial" parent="ArenaGeometry"]
-script = ExtResource( 6 )
-
-[node name="POS1" type="Position3D" parent="ArenaGeometry/small1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
-
-[node name="POS2" type="Position3D" parent="ArenaGeometry/small1"]
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-1/small1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/small1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -319.121, -19.71 )
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-1/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
 
-[node name="medium1" type="Spatial" parent="ArenaGeometry"]
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-1/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -46.6668, 0.66577 )
+
+[node name="chunk-2" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 59.13 )
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-2"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/medium1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-2/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/medium1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-2/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/medium1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-2/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
 
-[node name="medium6" type="Spatial" parent="ArenaGeometry"]
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-2"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-2/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-2/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-2/small0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-2"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/medium6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-2/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/medium6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-2/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/medium6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-2/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
 
-[node name="medium7" type="Spatial" parent="ArenaGeometry"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+[node name="chunk-5" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -59.13 )
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-5"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/medium7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-5/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/medium7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-5/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/medium7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-5/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
 
-[node name="medium3" type="Spatial" parent="ArenaGeometry"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 78.8341, 0, 0 )
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-5"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/medium3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.42, 0, 0 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-5/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/medium3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.42, 0, 19.71 )
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-5/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/medium3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.42, 0, -19.71 )
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-5/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
 
-[node name="medium2" type="Spatial" parent="ArenaGeometry"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 78.84 )
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-5"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/medium2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-5/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/medium2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-5/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/medium2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-5/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
 
-[node name="medium4" type="Spatial" parent="ArenaGeometry"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 98.55 )
+[node name="chunk-3" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.13, 0, 0 )
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-3"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/medium4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-3/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/medium4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-3/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/medium4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-3/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
 
-[node name="medium5" type="Spatial" parent="ArenaGeometry"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 118.26 )
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-3"]
 script = ExtResource( 6 )
 
-[node name="POS1" type="Position3D" parent="ArenaGeometry/medium5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -39.42 )
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-3/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
 
-[node name="POS2" type="Position3D" parent="ArenaGeometry/medium5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.42 )
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-3/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
 
-[node name="POS3" type="Position3D" parent="ArenaGeometry/medium5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -39.42 )
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-3/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-3"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-3/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-3/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-3/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
+
+[node name="chunk-6" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.13, 0, 0 )
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-6"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-6/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-6/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-6/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
+
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-6"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-6/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-6/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-6/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-6"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-6/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-6/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-6/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
+
+[node name="chunk-4" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.13, 0, 59.13 )
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-4"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-4/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-4/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-4/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
+
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-4"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-4/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-4/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-4/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-4"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-4/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-4/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-4/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
+
+[node name="chunk-7" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.13, 0, -59.13 )
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-7"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-7/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-7/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-7/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
+
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-7"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-7/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-7/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-7/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-7"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-7/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-7/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-7/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
+
+[node name="chunk-9" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.13, 0, -59.13 )
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-9"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-9/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-9/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-9/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
+
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-9"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-9/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-9/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-9/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-9"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-9/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-9/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-9/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
+
+[node name="chunk-8" type="Spatial" parent="ArenaGeometry"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.13, 0, 59.13 )
+
+[node name="main" type="Spatial" parent="ArenaGeometry/chunk-8"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-8/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-8/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-8/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 0 )
+
+[node name="small0" type="Spatial" parent="ArenaGeometry/chunk-8"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-8/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, -19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-8/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 0 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-8/small0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.71 )
+
+[node name="small1" type="Spatial" parent="ArenaGeometry/chunk-8"]
+script = ExtResource( 6 )
+
+[node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-8/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.71, 0, 19.71 )
+
+[node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-8/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, -19.71 )
+
+[node name="POS3" type="Position3D" parent="ArenaGeometry/chunk-8/small1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
 
 [node name="Lighting" type="Spatial" parent="."]
 
@@ -166,7 +378,7 @@ light_energy = 2.0
 shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 
 [node name="roof" type="MeshInstance" parent="."]
-transform = Transform( -25319.1, 0.00136776, 0, -0.000144909, -73.7301, 0, 0, 0, 25703.8, 0, 7.94689, 0 )
+transform = Transform( -25319.1, 0.00136776, 0, -0.000144909, -73.7301, 0, 0, 0, 25703.8, -0.509945, 7.94689, 0.437866 )
 mesh = SubResource( 1 )
 material/0 = ExtResource( 8 )
 
