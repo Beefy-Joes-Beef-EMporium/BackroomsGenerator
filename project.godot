@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Backrooms"
 run/main_scene="res://scenes/menu.tscn"
+boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
 
 [autoload]
@@ -25,10 +26,12 @@ size="*res://global.gd"
 
 [display]
 
-window/size/test_width=1024
-window/size/test_height=600
+window/size/always_on_top=true
+window/size/test_width=768
+window/size/test_height=450
 window/stretch/mode="2d"
-window/stretch/shrink=2.5
+window/stretch/aspect="keep"
+window/stretch/shrink=2.0
 
 [importer_defaults]
 

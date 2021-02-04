@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/s_main/default_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/s_main/s_main.gd" type="Script" id=2]
@@ -9,6 +9,13 @@
 [ext_resource path="res://audio/loop_hum_06.ogg" type="AudioStream" id=7]
 [ext_resource path="res://textures/roof.tres" type="Material" id=8]
 [ext_resource path="res://scenes/s_main/scripts/audiocalc.gd" type="Script" id=9]
+[ext_resource path="res://audio/ambeince/funky.ogg" type="AudioStream" id=10]
+[ext_resource path="res://rooms/RM4.tscn" type="PackedScene" id=11]
+[ext_resource path="res://rooms/details/radio.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://textures/radio.png" type="Texture" id=13]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 13 )
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -144,7 +151,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.13, 0, 0 )
 script = ExtResource( 6 )
 
 [node name="POS1" type="Position3D" parent="ArenaGeometry/chunk-3/main"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -52.8283, 19.7099 )
+
+[node name="POS4" type="Position3D" parent="ArenaGeometry/chunk-3/main"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7099 )
+
+[node name="RM4" parent="ArenaGeometry/chunk-3/main/POS4" instance=ExtResource( 11 )]
+
+[node name="radio" type="MeshInstance" parent="ArenaGeometry/chunk-3/main/POS4/RM4"]
+transform = Transform( -0.521613, 0, -1.69963e-07, 0, 0.521613, 0, 1.69963e-07, 0, -0.521613, 7.05161, 2.61944, 7.69804 )
+mesh = ExtResource( 12 )
+material/0 = SubResource( 3 )
 
 [node name="POS2" type="Position3D" parent="ArenaGeometry/chunk-3/main"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71, 0, 19.71 )
@@ -377,7 +394,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022, -0.011, 0 )
 environment = ExtResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Lighting"]
-transform = Transform( 0.965926, 0.198266, 0.166365, -2.09447e-07, -0.642788, 0.766044, 0.258818, -0.739942, -0.620885, 2.17494, 9.39172, -2.14115 )
+transform = Transform( 0.868968, -0.379091, -0.318095, -2.09447e-07, -0.642788, 0.766044, -0.494868, -0.665668, -0.558562, 2.17494, 9.39172, -2.14115 )
 light_energy = 2.0
 shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 
@@ -393,73 +410,91 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85704, 0 )
 
 [node name="audio" type="Spatial" parent="."]
 script = ExtResource( 9 )
-NoiseChange = 11.5
 
 [node name="poscontroller" type="Spatial" parent="audio"]
 
 [node name="1" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.49237, 6.45066, -10.8786 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="2" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.49237, 6.45066, -20.3572 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="3" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2668, 6.45066, -20.3572 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="4" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2668, 6.45066, 23.378 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="5" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0629, 6.45066, 23.378 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="6" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8251, 6.45066, -10.8746 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="7" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4565, 6.45066, -10.8746 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="8" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7176, 6.45066, -10.8746 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="9" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7176, 6.45066, 9.43371 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="10" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4565, 6.45066, 10.356 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="11" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94141, 6.45066, 10.356 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="12" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1964, 6.45066, 10.356 )
 stream = ExtResource( 7 )
+unit_db = -5.0
 autoplay = true
 
 [node name="MeshInstance" type="MeshInstance" parent="audio/poscontroller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.60731, 0 )
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="EATO_1" type="AudioStreamPlayer3D" parent="audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65.3761, 2.51027, 26.6555 )
+stream = ExtResource( 10 )
+unit_db = 2.5
+autoplay = true
+max_distance = 40.0
 [connection signal="PlayerPosition" from="." to="audio" method="_on_S_Main_PlayerPosition"]
 [connection signal="position" from="Player" to="." method="_on_Player_position"]
