@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/s_main/scripts/AudioArea_1.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 10.1973, 4.77726, 8.55685 )
+
+[node name="Area_1" type="Area"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02704, 0 )
+shape = SubResource( 3 )
+
+[node name="audio" type="Spatial" parent="."]
+script = ExtResource( 1 )
+[connection signal="area_entered" from="." to="audio" method="_on_Area_1_area_entered"]
+[connection signal="body_entered" from="." to="audio" method="_on_Area_1_body_entered"]
+[connection signal="body_exited" from="." to="audio" method="_on_Area_1_body_exited"]

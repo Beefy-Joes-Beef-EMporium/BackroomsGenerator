@@ -16,6 +16,10 @@ var direction := Vector3()
 var move_axis := Vector2()
 var sprint_enabled := true
 var sprinting := false
+var position = self.get_translation()
+var ypos = Vector3()
+var fly = false
+signal position(position)
 # Walk
 const FLOOR_MAX_ANGLE: float = deg2rad(46.0)
 export(float) var gravity = 30.0
@@ -28,7 +32,6 @@ export(int) var jump_height = 10
 # Fly
 export(int) var fly_speed = 10
 export(int) var fly_accel = 4
-var flying := false
 
 ##################################################
 
@@ -46,11 +49,9 @@ func _process(_delta: float) -> void:
 
 # Called every physics tick. 'delta' is constant
 func _physics_process(delta: float) -> void:
-	if flying:
-		fly(delta)
-	else:
-		walk(delta)
+	walk(delta)
 
+	#print("current Pos: ", PosX, " | ", PosZ)
 
 # Called when there is an input event
 func _input(event: InputEvent) -> void:
@@ -73,14 +74,16 @@ func walk(delta: float) -> void:
 		direction += aim.x
 	direction.y = 0
 	direction = direction.normalized()
+	var position = self.get_translation()
+	emit_signal("position", position)
 	
 	# Jump
 	var _snap: Vector3
-	if is_on_floor():
-		_snap = Vector3.DOWN
-		if Input.is_action_just_pressed("move_jump"):
-			_snap = Vector3.ZERO
-			velocity.y = jump_height
+#	if is_on_floor():
+#		_snap = Vector3.DOWN
+#		if Input.is_action_just_pressed("move_jump"):
+#			_snap = Vector3.ZERO
+#			velocity.y = jump_height
 	
 	# Apply Gravity
 	velocity.y -= gravity * delta
@@ -126,21 +129,6 @@ func walk(delta: float) -> void:
 		velocity = moving
 	else:
 		velocity.y = moving.y
-
-
-func fly(delta: float) -> void:
-	# Input
-	direction = Vector3()
-	var aim = head.get_global_transform().basis
-	if move_axis.x >= 0.5:
-		direction -= aim.z
-	if move_axis.x <= -0.5:
-		direction += aim.z
-	if move_axis.y <= -0.5:
-		direction -= aim.x
-	if move_axis.y >= 0.5:
-		direction += aim.x
-	direction = direction.normalized()
 	
 	# Acceleration and Deacceleration
 	var target: Vector3 = direction * fly_speed
@@ -169,3 +157,5 @@ func camera_rotation() -> void:
 
 func can_sprint() -> bool:
 	return (sprint_enabled and is_on_floor())
+
+

@@ -10,6 +10,9 @@ var mouse_mode: String = "CAPTURED"
 
 ##################################################
 
+signal PlayerPosition(pos)
+
+
 func _ready() -> void:
 	if fast_close:
 		print("** Fast Close enabled in the 's_main.gd' script **")
@@ -28,3 +31,9 @@ func _input(event: InputEvent) -> void:
 			"VISIBLE":
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				mouse_mode = "CAPTURED"
+				
+
+
+func _on_Player_position(position):
+	emit_signal("PlayerPosition", position)
+	pass # Replace with function body.

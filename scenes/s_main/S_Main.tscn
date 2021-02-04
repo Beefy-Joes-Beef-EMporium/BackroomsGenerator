@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/s_main/default_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/s_main/s_main.gd" type="Script" id=2]
@@ -6,9 +6,13 @@
 [ext_resource path="res://rooms/RM1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/assets/fps_counter/FPS_Counter.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/s_main/scripts/spawner.gd" type="Script" id=6]
+[ext_resource path="res://audio/loop_hum_06.ogg" type="AudioStream" id=7]
 [ext_resource path="res://textures/roof.tres" type="Material" id=8]
+[ext_resource path="res://scenes/s_main/scripts/audiocalc.gd" type="Script" id=9]
 
 [sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
 
 [node name="S_Main" type="Spatial"]
 script = ExtResource( 2 )
@@ -378,7 +382,7 @@ light_energy = 2.0
 shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 
 [node name="roof" type="MeshInstance" parent="."]
-transform = Transform( -25319.1, 0.00136776, 0, -0.000144909, -73.7301, 0, 0, 0, 25703.8, -0.509945, 7.94689, 0.437866 )
+transform = Transform( -25319.1, 0.00136776, 0, -0.000144909, -73.7301, 0, 0, 0, 25703.8, -0.530562, 7.9019, 0.331513 )
 mesh = SubResource( 1 )
 material/0 = ExtResource( 8 )
 
@@ -386,3 +390,76 @@ material/0 = ExtResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85704, 0 )
 
 [node name="FPS_Counter" parent="." instance=ExtResource( 5 )]
+
+[node name="audio" type="Spatial" parent="."]
+script = ExtResource( 9 )
+NoiseChange = 11.5
+
+[node name="poscontroller" type="Spatial" parent="audio"]
+
+[node name="1" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.49237, 6.45066, -10.8786 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="2" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.49237, 6.45066, -20.3572 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="3" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2668, 6.45066, -20.3572 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="4" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2668, 6.45066, 23.378 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="5" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0629, 6.45066, 23.378 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="6" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8251, 6.45066, -10.8746 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="7" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4565, 6.45066, -10.8746 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="8" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7176, 6.45066, -10.8746 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="9" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7176, 6.45066, 9.43371 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="10" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4565, 6.45066, 10.356 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="11" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94141, 6.45066, 10.356 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="12" type="AudioStreamPlayer3D" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1964, 6.45066, 10.356 )
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="MeshInstance" type="MeshInstance" parent="audio/poscontroller"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.60731, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+[connection signal="PlayerPosition" from="." to="audio" method="_on_S_Main_PlayerPosition"]
+[connection signal="position" from="Player" to="." method="_on_Player_position"]
